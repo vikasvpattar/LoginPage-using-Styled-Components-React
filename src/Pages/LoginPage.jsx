@@ -136,13 +136,14 @@ const PasswordImg = styled.div`
 
 const ChangePass = styled.div`
   float: right;
-  margin-top: 10px;
 `;
 
 const Text = styled.p`
   color: #04072f;
   text-align: center;
 `;
+
+const PassAndCheckContainer = styled.div``;
 
 const Login = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -174,15 +175,18 @@ const Login = () => {
             <PasswordImg>
               <Image src={EyeSlash} onClick={handlePasswordVisibility} />
             </PasswordImg>
-            <ChangePass>
-              <Link>Change Password</Link>
-            </ChangePass>
           </PasswordContainer>
         </FormGroup>
-        <CheckboxLabel>
-          <Checkbox type="checkbox" id="rememberMe" />
-          Remember Me
-        </CheckboxLabel>
+        <PassAndCheckContainer>
+          <CheckboxLabel>
+            <Checkbox type="checkbox" id="rememberMe" />
+            Remember Me
+          </CheckboxLabel>
+          <ChangePass>
+            <Link>Change Password</Link>
+          </ChangePass>
+        </PassAndCheckContainer>
+
         <CheckboxLabel>
           <Checkbox type="checkbox" id="agreeToTerms" />
           Agree to Terms and Conditions
